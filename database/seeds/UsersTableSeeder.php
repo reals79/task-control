@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
         $defaults = [
             'email' => 'superadmin',
             'email_verified_at' => now(),
-            'password' => 'supersecret',
+            'password' => bcrypt('supersecret'),
             'name'     => 'Super-' . __('app.administrator'),
             'activated' => '1'
         ];
